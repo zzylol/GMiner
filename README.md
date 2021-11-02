@@ -48,3 +48,18 @@ The subgraph-centric vertex-pulling API is attributed to our prior work [G-think
 ## License
 
 Copyright 2018 Husky Data Lab, CUHK
+
+## Issues
+```
+zz_y@node0:~/GMiner$ mpiexec -n 1 /users/zz_y/GMiner/release/put sample-datasets/normal_sample.adj /GMiner/normal_sample
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hadoop-2.6.0/share/hadoop/httpfs/tomcat/webapps/webhdfs/WEB-INF/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop-2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop-2.6.0/share/hadoop/kms/tomcat/webapps/kms/WEB-INF/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+readDirect: FSDataInputStream#read error:
+java.lang.UnsupportedOperationException: Byte-buffer read unsupported by input stream
+	at org.apache.hadoop.fs.FSDataInputStream.read(FSDataInputStream.java:146)
+hdfsOpenFile(sample-datasets/normal_sample.adj): WARN: Unexpected error 255 when testing for direct read compatibility
+```
